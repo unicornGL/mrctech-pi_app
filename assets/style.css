@@ -13,6 +13,10 @@
   flex-direction: row;
   align-items: center;
   border-bottom: solid 2px #bbb;
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+  background-color: #fff;
 }
 
 .header .logo {
@@ -52,7 +56,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 40px;
+  padding: 60px 40px 0;
+  position: relative;
+  z-index: 1;
 }
 
 .filter .tag {
@@ -67,4 +73,85 @@
 .filter .all {
   background-color: #666;
   color: #eee;
+}
+
+.content {
+  padding: 0 50px;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.content .video {
+  margin: 0 20px 30px 10px;
+  width: 420px;
+}
+
+.content .video .videoPic {
+  width: 420px;
+}
+
+.content .video .info {
+  display: flex;
+  position: relative;
+  margin-top: 7px;
+}
+
+.content .video .info .channelLogo {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+}
+
+.content .video .info .infoText {
+  word-wrap: break-word;
+}
+
+.content .video .info .infoText .videoTitle {
+  width: 315px;
+  font-weight: 800;
+  font-size: 18px;
+  word-spacing: 2px;
+  margin: 2px 0 5px;
+}
+
+.content .video .info .infoText .infoDetail {
+  width: 315px;
+  font-size: 15px;
+  color: rgba(102, 102, 102, 0.8);
+}
+
+.content .video .info .ellipsisIcon {
+  position: absolute;
+  color: rgba(102, 102, 102, 0.8);
+  top: 10px;
+  right: 10px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+  background-color: #fff;
+  bottom: 0;
+  padding: 15px 0 10px;
+}
+
+.toolbar .tool {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.toolbar .tool .toolText {
+  margin-top: 5px;
+  font-weight: 700;
+}
+
+.toolbar .tool .other {
+  color: rgba(102, 102, 102, 0.5);
 }
